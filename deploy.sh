@@ -12,6 +12,9 @@ git clone git@github.com:Sanscan12/Blog.git
 # 生成静态文件 / 生成覆盖
 npm run build
 
+# 自定义域名
+echo 'blog.bozhu12.cc' > CNAME
+
 # 部署
 git add -A
 git commit -m "deploy"
