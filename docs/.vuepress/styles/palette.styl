@@ -1,0 +1,125 @@
+//***vdoing主题-样式变量（你可以修改这些变量值以覆盖主题使用的样式变量）***//
+
+// 以下注释的变量仅供参考，主题使用的最新变量请查看：https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/theme-vdoing/styles/palette.styl
+
+// // 颜色
+
+// $bannerTextColor = #fff // 首页banner区(博客标题)文本颜色
+$accentColor = #bd93f9 // 主题色
+//$activeColor = #ff5722
+//$arrowBgColor = #ccc
+
+// // 布局
+// $navbarHeight = 3.6rem
+$sidebarWidth = 15rem
+$contentWidth = 900px
+// $homePageWidth = 1100px
+$rightMenuWidth = 200px // 右侧菜单
+
+// // 代码块
+// $lineNumbersWrapperWidth = 2.5rem
+
+// // 浅色模式
+// .theme-mode-light
+//   --bodyBg: #f4f4f4
+//   --mainBg: rgba(255,255,255,1)
+//   --sidebarBg: rgba(255,255,255,.8)
+//   --blurBg: rgba(255,255,255,.9)
+//   --textColor: #004050
+//   --textLightenColor: #0085AD
+//   --borderColor: rgba(0,0,0,.15)
+//   // 代码块浅色主题
+//   --codeBg: #f6f6f6
+//   --codeColor: #525252
+//   codeThemeLight()
+//   // // 代码块深色主题
+//   // --codeBg: #252526
+//   // --codeColor: #fff
+//   // codeThemeDark()
+
+// // 深色模式
+// .theme-mode-dark
+//   --bodyBg: rgb(39,39,43)
+//   --mainBg: rgba(30,30,34,1)
+//   --sidebarBg: rgba(30,30,34,.8)
+//   --blurBg: rgba(30,30,34,.8)
+//   --textColor: rgb(140,140,150)
+//   --textLightenColor: #0085AD
+//   --borderColor: #2C2C3A
+//   --codeBg: #252526
+//   --codeColor: #fff
+//   codeThemeDark()
+
+// // 阅读模式
+// .theme-mode-read
+//   --bodyBg: rgb(240,240,208)
+//   --mainBg: rgba(245,245,213,1)
+//   --sidebarBg: rgba(245,245,213,.8)
+//   --blurBg: rgba(245,245,213,.9)
+//   --textColor: #004050
+//   --textLightenColor: #0085AD
+//   --borderColor: rgba(0,0,0,.15)
+//   --codeBg: #282c34
+//   --codeColor: #fff
+//   codeThemeDark()
+
+// 文章配置
+.content-wrapper h1, h2, h3, h4, h5, h6 {
+  color: $accentColor;
+}
+
+.content-wrapper h2 {
+  margin-top: 1.8rem !important;
+  padding-top: 0 !important;
+  padding-left: 0.4em;
+  border-left: 0.4em solid $accentColor;
+  border-bottom: 1px solid $accentColor;
+}
+
+.content-wrapper h3 {
+  margin-top: 1.5rem !important;
+  padding-top: 0 !important;
+  padding-left: 0.2em;
+  border-left: 0.1em solid $accentColor;
+  border-bottom: 1px solid $accentColor;
+}
+
+a.header-anchor {
+  margin-left: -1.5em !important;
+}
+
+// 右侧栏
+.right-menu-margin .active > a {
+  background-color: rgba(116, 95, 181, 0.2);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+// 左侧栏
+.sidebar a[aria-current="page"] {
+  background-color: rgba(116, 95, 181, 0.2);
+}
+
+// 表格
+table {
+  //background-color: rgb(85 0 0 / 46%);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+table th, table td {
+  border: 2px #8064a9b8 solid;
+}
+// artalk 评论框 适配暗黑模式
+.theme-mode-dark #vuepress-plugin-vdoing-comment {
+  --at-color-bg: --bodyBg;
+  color: #ffffff;
+  --at-color-font: #ffffff;
+  --at-color-bg-transl: --bodyBg;
+  --at-color-bg-grey: #373a40
+}
+.theme-mode-dark #vuepress-plugin-vdoing-comment .atk-editor-plug-emoticons > .atk-grp-switcher > span:hover, .atk-editor-plug-emoticons > .atk-grp-switcher > span.active {
+  background: var(--at-color-bg-grey);
+}
+.theme-mode-dark #vuepress-plugin-vdoing-comment .atk-editor-plug-emoticons > .atk-grp-switcher {
+  background: var(--at-color-bg-grey)
+}
