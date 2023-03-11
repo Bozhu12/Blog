@@ -7,7 +7,7 @@ set -e
 cd docs/.vuepress/dist
 
 # 初始化
-git clone https://github.com/Sanscan12/Blog.git
+git clone git@github.com:Sanscan12/Blog.git
 
 # 生成静态文件 / 生成覆盖
 npm run build
