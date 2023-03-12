@@ -16,7 +16,7 @@ echo 'blog.bozhu12.cc' > CNAME
 
 # 部署
 git add -A
-git commit -m "deploy"
+git commit -m "deploy1"
 git push -f git@github.com:Sanscan12/Blog.git main
 
 # 删除
