@@ -20,3 +20,9 @@ urls.txt
 
 # mac
 .DS_Store
+
+# claude
+.claude/
+
+# temporary files
+temp.md
