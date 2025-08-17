@@ -25,7 +25,7 @@
             <!-- 一级目录 -->
             <dt :id="(anchorText = item.title)">
               <a :href="`#${anchorText}`" class="header-anchor">#</a>
-              {{ `${index + 1}. ${item.title}` }}
+              {{ 22+':'+ `${index + 1}. ${item.title}` }}
             </dt>
             <dd>
               <!-- 二级目录 -->

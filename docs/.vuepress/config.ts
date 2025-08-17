@@ -38,11 +38,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 link: '/web/'
             },
             {
-                text: '学习',
+                text: '更多',
+                link: '/other/',
                 items: [
-                    {text: '拓展知识', link: '/other/'},
-                    {text: '零碎知识', link: '/other/'},
-                    {text: '工具介绍', link: '/pages/4c778760be26d8b3/'},
+                    //     {text: '建站', link: '/other/'},
+                    {text: '应用推荐', link: '/pages/Amway/'},
+                    // {text: '说说', link: '/say/say2023/'}
                 ],
             },
             {text: '关于', link: '/about/'},
@@ -57,14 +58,16 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 ],
             },
         ],
+        // 搜索
+        searchPlaceholder: "按下 𝑺 搜索", // 可选：搜索栏占位文本
         // 侧边栏显示深度，默认1，最大2（显示到h3标题）
         sidebarDepth: 2,
-        logo: '/img/favicon.ico', // 导航栏logo
+        logo: 'https://image.bozhu12.cc/myblog/Essay/hendImage01.jpg', // 导航栏logo
         // repo: 'xugaoyi/vuepress-theme-vdoing', // 导航栏右侧生成Github链接
         searchMaxSuggestions: 10, // 搜索结果显示最大数
         lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
         docsDir: 'docs', // 编辑的文件夹
-        // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
+        docsBranch: 'main', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
         editLinks: true, // 启用编辑
         editLinkText: '编辑',
 
@@ -73,15 +76,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         // category: false, // 是否打开分类功能，默认true
         // tag: false, // 是否打开标签功能，默认true
         // archive: false, // 是否打开归档功能，默认true
-        // categoryText: '随笔', // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
+        categoryText: '其他', // 碎片化文章（_posts文件夹的文章）预设生成的分类值，默认'随笔'
 
         // pageStyle: 'line', // 页面风格，可选值：'card'卡片 | 'line' 线（未设置bodyBgImg时才生效）， 默认'card'。 说明：card时背景显示灰色衬托出卡片样式，line时背景显示纯色，并且部分模块带线条边框
 
         // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时隔bodyBgImgInterval切换一张。
         bodyBgImg: [
-          '/img/home.jpg'
-          // 'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175845.jpeg',
-          // 'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175846.jpeg'
+            'https://image.bozhu12.cc/myblog/Essay/home.jpg'
+            // 'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175845.jpeg',
+            // 'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200507175846.jpeg'
         ],
         // bodyBgImgOpacity: 0.5, // body背景图透明度，选值 0.1~1.0, 默认0.5
         // bodyBgImgInterval: 15, // body多张背景图时的切换间隔, 默认15，单位s
@@ -109,12 +112,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
         author: {
             name: '柏竹', // 必需
-            link: 'https://github.com/Sanscan12', // 可选的
+            link: 'https://github.com/Bozhu12', // 可选的
         },
 
         // 博主信息 (显示在首页侧边栏)
         blogger: {
-            avatar: 'https://avatars.githubusercontent.com/u/61259803?v=4',
+            avatar: 'https://image.bozhu12.cc/myblog/Essay/favicon.ico',
             name: '柏竹',
             slogan: '奋斗柏竹',
         },
@@ -126,12 +129,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 {
                     iconClass: 'icon-weixin',
                     title: '联系',
-                    link: 'Sanscan12',
+                    link: 'Bozhu12',
                 },
                 {
                     iconClass: 'icon-github',
                     title: 'GitHub',
-                    link: 'https://github.com/Sasncan12',
+                    link: 'https://github.com/Bozhu12',
                 },
                 {
                     iconClass: 'icon-erji',
@@ -146,15 +149,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             // 博客创建年份
             createYear: 2019,
             copyrightInfo:
-                'Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>',
+                ' | <a href="https://beian.miit.gov.cn/">桂ICP备2022009417号-1</a>',
             // 博客版权信息、备案信息等，支持a标签或换行标签</br>
         },
 
         // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
         extendFrontmatter: {
             author: {
-                name: 'Sanscan12',
-                link: 'https://github.com/Sanscan12'
+                name: 'Bozhu12',
+                link: 'https://github.com/Bozhu12'
             }
         },
 
@@ -165,16 +168,20 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
     head: [
         // 头像
-        ['link', {rel: 'icon', href: '/img/favicon.ico'}], //favicons，资源放在public文件夹
+        ['link', {rel: 'icon', href: 'https://image.bozhu12.cc/myblog/Essay/favicon.ico'}], //favicons，资源放在public文件夹
         [
             'meta',
             {
-                name: 'keywords',
-                content: '前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
+                name: 'Bozhu12',
+                content: '柏竹博客, 个人技术博客, 前后端 , 技术文档',
             },
         ],
         ['meta', {name: 'baidu-site-verification', content: '7F55weZDDc'}], // 百度统计的站长验证（你可以去掉）
         ['meta', {name: 'theme-color', content: '#bd93f9'}], // 移动浏览器主题颜色
+        // 自定义
+        ["script", {"language": "javascript", "type": "text/javascript", "src": "/js/pgmanor-self.js"}],
+        // 视图插件 echarts
+        ["script", {"language": "javascript", "type": "text/javascript", "src": "/js/echarts.min.js"}],
         // [
         //   'script',
         //   {
@@ -204,38 +211,41 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             },
         ],
 
+        // echarts 图形化
+        // 'vuepress-plugin-echarts',
+
         // 全文搜索。 ⚠️注意：此插件会在打开网站时多加载部分js文件用于搜索，导致初次访问网站变慢。如在意初次访问速度的话可以不使用此插件！（推荐：vuepress-plugin-thirdparty-search）
-        // 'fulltext-search',
+        'fulltext-search',
 
         // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
-        [
-            'thirdparty-search',
-            {
-                thirdparty: [
-                    {
-                        title: '在MDN中搜索',
-                        frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
-                        behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
-                    },
-                    {
-                        title: '在Runoob中搜索',
-                        frontUrl: 'https://www.runoob.com/?s=',
-                    },
-                    {
-                        title: '在Vue API中搜索',
-                        frontUrl: 'https://cn.vuejs.org/v2/api/#',
-                    },
-                    {
-                        title: '在Bing中搜索',
-                        frontUrl: 'https://cn.bing.com/search?q=',
-                    },
-                    {
-                        title: '通过百度搜索本站的',
-                        frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
-                    },
-                ],
-            }
-        ],
+        // [
+        //     'thirdparty-search',
+        //     {
+        //         thirdparty: [
+        //             {
+        //                 title: '在MDN中搜索',
+        //                 frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
+        //                 behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
+        //             },
+        //             {
+        //                 title: '在Runoob中搜索',
+        //                 frontUrl: 'https://www.runoob.com/?s=',
+        //             },
+        //             {
+        //                 title: '在Vue API中搜索',
+        //                 frontUrl: 'https://cn.vuejs.org/v2/api/#',
+        //             },
+        //             {
+        //                 title: '在Bing中搜索',
+        //                 frontUrl: 'https://cn.bing.com/search?q=',
+        //             },
+        //             {
+        //                 title: '通过百度搜索本站的',
+        //                 frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
+        //             },
+        //         ],
+        //     }
+        // ],
 
         [
             'one-click-copy', // 代码块复制按钮
@@ -253,7 +263,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 settings: {
                     // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
                     // cssLib: ['http://xxx'], // 在线示例中的css依赖
-                    // vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
+                    vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
                     jsfiddle: false, // 是否显示 jsfiddle 链接
                     codepen: true, // 是否显示 codepen 链接
                     horizontal: false, // 是否展示为横向样式
@@ -275,11 +285,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             {
                 choosen: 'artalk',
                 options: {
-                    server: 'https://comment.bozhu12.cc', // （必填）
-                    site: '柏竹', // （必填）
-                    // disableEmotion: false, // 是否禁用表情（可选）
-                    // disablePicture: true, // 是否禁用图片（可选）
-                    // disablePreview: false // 是否禁用预览（可选）
+                    server: 'https://comment.bozhu12.cc', // 地址（必填）
+                    site: '柏竹', // 站点名（必填）
+                    versionCheck: false, // 关闭版本检查（可选）
                 }
             }
         ],
@@ -314,7 +322,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     ],
 
     markdown: {
-        lineNumbers: true,
+        lineNumbers: false,
         extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3'],
     },
 
