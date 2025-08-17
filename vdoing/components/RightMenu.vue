@@ -12,7 +12,7 @@
           v-for="(item, i) in headers"
           :key="i"
         >
-          <a :href="'#' + item.slug">{{ item.title }}</a>
+          <a :href="'#' + item.slug">{{ item.numbering || '' }}{{ item.title }}</a>
         </div>
       </div>
     </div>
@@ -34,15 +34,48 @@ export default {
   watch: {
     $route() {
       this.headers = this.$page.headers
+      this.generateNumbering()
       this.getHashText()
     }
   },
   methods: {
     getHeadersData() {
       this.headers = this.$page.headers
+      this.generateNumbering()
     },
     getHashText() {
       this.hashText = decodeURIComponent(window.location.hash.slice(1))
+    },
+    generateNumbering() {
+      if (!this.headers || this.headers.length === 0) return
+      
+      // 初始化各级别计数器
+      const counters = [0, 0, 0, 0, 0] // 对应 h2, h3, h4, h5, h6
+      
+      this.headers.forEach(header => {
+        const level = header.level - 2 // 转换为数组索引 (h2=0, h3=1, h4=2, h5=3, h6=4)
+        
+        if (level >= 0 && level < 5) {
+          // 重置更深层级的计数器
+          for (let i = level + 1; i < 5; i++) {
+            counters[i] = 0
+          }
+          
+          // 增加当前层级计数器
+          counters[level]++
+          
+          // 生成编号字符串
+          let numbering = ''
+          for (let i = 0; i <= level; i++) {
+            if (counters[i] > 0) {
+              numbering += (numbering ? '.' : '') + counters[i]
+            }
+          }
+          
+          // 为标题添加编号属性
+          header.numbering = numbering + '. '
+        }
+      })
     }
   }
 }

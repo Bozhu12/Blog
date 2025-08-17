@@ -209,6 +209,49 @@ h1, h2, h3, h4, h5, h6
   &:hover .header-anchor
     opacity: 1
 
+// 文档标题自动编号
+{$contentClass}:not(.custom)
+  counter-reset h2-counter h3-counter h4-counter h5-counter h6-counter
+  
+  h2
+    counter-increment h2-counter
+    counter-reset h3-counter h4-counter h5-counter h6-counter
+    &::before
+      content counter(h2-counter) ". "
+      color $accentColor
+      font-weight 600
+  
+  h3
+    counter-increment h3-counter
+    counter-reset h4-counter h5-counter h6-counter
+    &::before
+      content counter(h2-counter) "." counter(h3-counter) " "
+      color $accentColor
+      font-weight 600
+  
+  h4
+    counter-increment h4-counter
+    counter-reset h5-counter h6-counter
+    &::before
+      content counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) " "
+      color $accentColor
+      font-weight 600
+  
+  h5
+    counter-increment h5-counter
+    counter-reset h6-counter
+    &::before
+      content counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) " "
+      color $accentColor
+      font-weight 600
+  
+  h6
+    counter-increment h6-counter
+    &::before
+      content counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) "." counter(h6-counter) " "
+      color $accentColor
+      font-weight 600
+
 
 // 没有h1标签时
 p,pre,.custom-block
