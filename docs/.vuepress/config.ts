@@ -7,6 +7,8 @@ import {VdoingThemeConfig} from 'vuepress-theme-vdoing/types'
 import dayjs from 'dayjs'
 import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
+// @ts-ignore
+import markdownItMark from 'markdown-it-mark'
 
 const DOMAIN_NAME = 'www.bozhu12.cc' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
@@ -324,6 +326,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     markdown: {
         lineNumbers: false,
         extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3'],
+        extendMarkdown: md => {
+            // 使用 markdown-it-mark 插件支持 =={内容}== 语法
+            md.use(markdownItMark)
+        }
     },
 
     // 监听文件变化并重新构建
