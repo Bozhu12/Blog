@@ -29,3 +29,7 @@ temp.md
 
 # shell scripts
 *.sh
+
+# custom folders
+ai_doccs/
+bin/
