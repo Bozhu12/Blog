@@ -26,3 +26,6 @@ urls.txt
 
 # temporary files
 temp.md
+
+# shell scripts
+*.sh
