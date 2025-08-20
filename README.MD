@@ -1,4 +1,4 @@
-# 个人技术博客
+# Vuepress Theme Vdoing
 
 基于 VuePress + Vdoing 主题构建的个人技术知识库和博客网站。
 
