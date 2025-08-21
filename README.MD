@@ -136,6 +136,13 @@ Copyright (c) 2019-present Evan Xu (vuepress-theme-vdoing)
 
 项目采用语义化版本管理，详细更新记录请查看 [Releases](../../releases) 页面。
 
+## 相关资源
+
+### AI 工具分享
+- **AI Code Mirror:** [https://www.aicodemirror.com/register?invitecode=NKCDMW](https://www.aicodemirror.com/register?invitecode=NKCDMW)
+  - 优质的 AI 编程工具资源分享平台
+  - 使用邀请码 `NKCDMW` 注册
+
 ---
 
 > 如果觉得这个项目对您有帮助，欢迎给个 ⭐ Star 支持一下！
