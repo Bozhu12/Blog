@@ -281,7 +281,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 },
             },
         ],
-        // 评论
+        // 评论 - 更新为兼容 Artalk v2.9.1
         [
             'vuepress-plugin-vdoing-comment',
             {
@@ -290,6 +290,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                     server: 'https://comment.bozhu12.cc', // 地址（必填）
                     site: '柏竹', // 站点名（必填）
                     versionCheck: false, // 关闭版本检查（可选）
+                    apiVersion: 'v2', // 强制使用 v2 API
+                    useBackendVersion: '2.9.1' // 指定后端版本
                 }
             }
         ],

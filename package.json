@@ -2,8 +2,8 @@
   "name": "theme-vdoing-blog",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node --max_old_space_size=4096 ./node_modules/vuepress/cli.js dev docs",
-    "build": "node --max_old_space_size=16384 ./node_modules/vuepress/cli.js build docs",
+    "dev": "cross-env NODE_OPTIONS=\"--openssl-legacy-provider\" node --max_old_space_size=4096 ./node_modules/vuepress/cli.js dev docs",
+    "build": "cross-env NODE_OPTIONS=\"--openssl-legacy-provider\" node --max_old_space_size=16384 ./node_modules/vuepress/cli.js build docs",
     "deploy": "bash deploy.sh",
     "editFm": "node utils/editFrontmatter.js",
     "baiduPush": "node utils/baiduPush.js https://xugaoyi.com && bash baiduPush.sh",
@@ -12,6 +12,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "dayjs": "^1.9.7",
     "inquirer": "^7.1.0",
     "json2yaml": "^1.1.0",
@@ -31,6 +32,6 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
-    "vuepress-plugin-vdoing-comment": "^1.0.7"
+    "vuepress-plugin-vdoing-comment": "^1.1.0"
   }
 }
