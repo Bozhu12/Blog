@@ -17,6 +17,7 @@ pnpm-lock.yaml
 
 # vuepress
 docs/.vuepress/dist
+docs/.vuepress/config.bundled_*.mjs
 
 # 百度链接推送
 urls.txt
