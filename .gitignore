@@ -34,7 +34,7 @@ temp.md
 *.sh
 
 # custom folders
-ai_doccs/
+ai_docs/
 bin/
 
 # baidu verification
