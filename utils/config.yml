@@ -1,16 +1,86 @@
-#批量添加和修改、删除front matter配置文件
+# Frontmatter批量编辑配置
+# 适配新的目录结构
+
+# 全局默认配置
+defaults:
+  author:
+    name: 柏竹
+    link: https://github.com/Bozhu12
+  titleTag: 原创
 
 # 需要批量处理的路径，docs文件夹内的文件夹  (数组，映射路径：path[0]/path[1]/path[2] ... )
 path:
   - docs # 第一个成员必须是docs
-  - 04.更多
+  - 01.后端
 
 # 要删除的字段 (数组)
 delete:
   # - tags
 
- # 要添加、修改front matter的数据 （front matter中没有的数据则添加，已有的数据则覆盖）
+# 要添加、修改front matter的数据 （front matter中没有的数据则添加，已有的数据则覆盖）
 data:
-  # author:
-  #   name: xugaoyi
-  #   link: https://github.com/xugaoyi
+  categories:
+    - 后端
+  tags:
+    - Java
+  titleTag: 原创
+  author:
+    name: 柏竹
+    link: https://github.com/Bozhu12
+
+# 各分类的配置规则
+category_rules:
+  # 后端技术
+  backend:
+    java_basics:
+      path: 01.后端/01.Java基础
+      categories: [后端, Java基础]
+      tags: [Java, 基础]
+      
+    java_web:
+      path: 01.后端/02.JavaWeb
+      categories: [后端, JavaWeb]
+      tags: [Java, Web开发]
+      
+    frameworks:
+      path: 01.后端/03.框架
+      categories: [后端, 框架]
+      tags: [Spring, 框架]
+      
+    springboot:
+      path: 01.后端/04.SpringBoot
+      categories: [后端, SpringBoot]
+      tags: [SpringBoot, 框架]
+      
+    database:
+      path: 01.后端/05.SQL
+      categories: [后端, 数据库]
+      tags: [数据库, SQL]
+      
+  # 前端技术
+  frontend:
+    web_basics:
+      path: 02.前端
+      categories: [前端, Web基础]
+      tags: [前端, HTML, CSS, JavaScript]
+      
+  # 运维开发
+  devops:
+    tools:
+      path: 03.运维开发
+      categories: [运维开发]
+      tags: [运维, 工具]
+      
+  # 计算机基础
+  computer_science:
+    basics:
+      path: 04.计算机基础
+      categories: [计算机基础]
+      tags: [计算机科学]
+      
+  # 项目实践
+  projects:
+    practice:
+      path: 05.项目实践
+      categories: [项目实践]
+      tags: [项目实战, 实践]

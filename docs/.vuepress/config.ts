@@ -40,12 +40,22 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                 link: '/web/'
             },
             {
+                text: '运维',
+                link: '/03.运维开发/'
+            },
+            {
+                text: '基础',
+                link: '/04.计算机基础/'
+            },
+            {
+                text: '实践',
+                link: '/05.项目实践/'
+            },
+            {
                 text: '更多',
-                link: '/other/',
+                link: '/03.更多/',
                 items: [
-                    //     {text: '建站', link: '/other/'},
                     {text: '应用推荐', link: '/pages/Amway/'},
-                    // {text: '说说', link: '/say/say2023/'}
                 ],
             },
             {text: '关于', link: '/about/'},

@@ -39,3 +39,6 @@ bin/
 
 # baidu verification
 baidu_verify_codeva-9ffekTXf39.html
+
+# backup directories
+docs_backup_*/
