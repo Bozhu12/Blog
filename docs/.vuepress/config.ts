@@ -301,7 +301,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                     site: '柏竹', // 站点名（必填）
                     versionCheck: false, // 关闭版本检查（可选）
                     apiVersion: 'v2', // 强制使用 v2 API
-                    useBackendVersion: '2.9.1' // 指定后端版本
+                    useBackendVersion: '2.9.1', // 指定后端版本
+                    gravatar: {
+                        params: "d=mp&s=240"  // 去掉 sha256=1 参数
+                    }
                 }
             }
         ],
