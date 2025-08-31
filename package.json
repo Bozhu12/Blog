@@ -5,6 +5,7 @@
     "dev": "cross-env NODE_OPTIONS=\"--openssl-legacy-provider\" node --max_old_space_size=4096 ./node_modules/vuepress/cli.js dev docs",
     "build": "cross-env NODE_OPTIONS=\"--openssl-legacy-provider\" node --max_old_space_size=16384 ./node_modules/vuepress/cli.js build docs",
     "deploy": "bash deploy.sh",
+    "deploy:intranet": "npm run build && bash bin/deploy-intranet.sh",
     "editFm": "node utils/editFrontmatter.js",
     "baiduPush": "node utils/baiduPush.js https://xugaoyi.com && bash baiduPush.sh",
     "publish": "cd ./vdoing && npm publish && cd .. && yarn updateTheme",
